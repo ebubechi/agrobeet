@@ -12,8 +12,14 @@ class SignINPage extends StatelessWidget {
     return ViewModelBuilder<SignINPageViewModel>.nonReactive(
         builder: (context, model, child) => Scaffold(
           body: ListView(children: <Widget>[
-          myContainer1(),
-          myContainer2()],)
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: myContainer1(context),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: myContainer2(context),
+          )],)
         ),
         viewModelBuilder: () => SignINPageViewModel());
   }
