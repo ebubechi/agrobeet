@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Container myContainer1(context) {
+Container myContainer1(context, color) {
   return Container(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,8 +87,9 @@ Container myContainer1(context) {
         ),
         Padding(
           padding: const EdgeInsets.only(
-              left: 10.0, right: 10.0, top: 100.0, bottom: 50.0),
+              left: 10.0, right: 10.0, top: 110.0, bottom: 5.0),
           child: Container(
+            height: 60,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(
@@ -106,7 +107,7 @@ Container myContainer1(context) {
               ),
             ),
             decoration: BoxDecoration(
-                color: Colors.amber[800],
+                color: color,
                 borderRadius: BorderRadius.circular(50.0)),
           ),
         )
@@ -117,7 +118,7 @@ Container myContainer1(context) {
        boxShadow: [
       BoxShadow(
         color: Colors.grey.withOpacity(0.5),
-        spreadRadius: 5,
+        spreadRadius: 7,
         blurRadius: 7,
         offset: Offset(0, 3), // changes position of shadow
       ),
